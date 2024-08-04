@@ -1,7 +1,7 @@
 
-//  Generally any Function or API Return us a promise
+//  Generally any Function or API Return us a promise to 
 
-//  Promise is Returned As an Object 
+//  Promise is Returned As an Object to user
 
 //  Promise can be in 3 States : 1. Pending or Undefined  |  2.Resolved or Fullfilled  |  3.Rejected or Error
 
