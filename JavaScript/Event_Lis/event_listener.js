@@ -10,7 +10,7 @@ newbtn.onclick=()=>{
 // We will always use addEventlistener ....
 
 newbtn.addEventListener("click",()=>{
-    console.log("Hi i am from addEventlistener ! ");
+    console.log("First time call vai! ");
 })
 
 
@@ -21,7 +21,7 @@ newbtn.addEventListener("click",del);
 
 
 newbtn.addEventListener("click",()=>{
-    console.log("Third time call vai ! ");
+    console.log(" Second time was delete and i am Third time call vai ! ");
 })
 
 
@@ -35,3 +35,24 @@ newbtn.removeEventListener("click",del);
 
 // Question : Create a toggle button that changes the screen to dark-mode when clicked
 // then Changes into Light mode when clicked again ..
+
+let body1="white";
+let btn2=document.querySelector("#btn2");
+
+btn2.addEventListener("click",()=>{
+    if(body1=="dark"){
+        body1="white";
+        document.querySelector("body").style.backgroundColor="white";
+        
+    }
+    else if(body1=="white"){
+        body1="dark";
+        document.querySelector("body").style.backgroundColor="black";
+    }
+    console.log(body1);
+    
+})
+
+
+
+
