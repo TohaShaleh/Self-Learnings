@@ -39,15 +39,37 @@ newbtn.removeEventListener("click",del);
 let body1="white";
 let btn2=document.querySelector("#btn2");
 
+//  btn2.addEventListener("click",()=>{
+//     if(body1=="dark"){
+//         body1="white";
+//         document.querySelector("body").style.backgroundColor="white";
+        
+//     }
+//     else if(body1=="white"){
+//         body1="dark";
+//         document.querySelector("body").style.backgroundColor="black";
+//     }
+//     console.log(body1);
+    
+// })
+
+
+
+
+// Solving this problem by ClassList using CSS file
+
+let body=document.querySelector("body");
 btn2.addEventListener("click",()=>{
     if(body1=="dark"){
         body1="white";
-        document.querySelector("body").style.backgroundColor="white";
+        body.classList.add("white")
+        body.classList.remove("dark")
         
     }
     else if(body1=="white"){
         body1="dark";
-        document.querySelector("body").style.backgroundColor="black";
+        body.classList.add("dark");
+        body.classList.remove("white")
     }
     console.log(body1);
     
