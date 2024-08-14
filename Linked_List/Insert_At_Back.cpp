@@ -18,26 +18,26 @@ class Node{
 int main()
 {
     int n,a,b,i;
-    cout<<"\nEnter the number of elements you want to insert : ";
+    cout<<"\n Enter the number of elements you want to insert : ";
     cin>>n;
 
     Node *temp,*tail,*head;
     tail=head=NULL;
 
-    // Creating a Linked list by inserting a the beginning 
-    // If i insert 1,2,3,4,5,6  :  It will traverse like 6,5,4,3,2,1
+    // Creating a Linked list by inserting at the Ending 
+    // If i insert 1,2,3,4,5,6  :  It will traverse like 1,2,3,4,5,6  as FIFO...
     for(i=0;i<n;i++)
     {
         cin>>a;  
         if(head==NULL)
         {
             head=new Node(a);
+            tail=head;
         }
         else
         {
-            temp=new Node(a);
-            temp->next=head;
-            head=temp;
+            tail->next=new Node(a);
+            tail=tail->next;
         }
     }
 
