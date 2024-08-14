@@ -44,31 +44,56 @@ int main()
 
     // Traversing the newly created linked list
     temp=head;
+    cout<<"Original Linked List : ";
     while(temp)
     {
         cout<<temp->data<<"  ";
         temp=temp->next;
     }
 
+    
+    // Inserting an Element at any position in the Linked List
 
-    // Searching an element in a linked list 
-
-    cout<<"\nEnter an Element to be search : ";
-    int value;
-    cin>>value;
-    int position=0,ans=0;
+    int posi,element,k=1;
+    cout<<"\n\n Enter the position and element that needs to be inserted : ";
+    cin>>posi>>element;
+    Node *value=new Node(element);
     temp=head;
-    while(temp){
-        position++;
-        if(temp->data==value)
+
+    if(posi==1)
+    {
+        value->next=head;
+        head=value;
+    }
+    else
+    {
+        while(temp && k<posi-1)
         {
-            cout<<"value found at position : "<<position<<endl;
-            ans=true;
-            break;
+            temp=temp->next;
+            k++;
         }
+        if(temp)
+        {
+            value->next=temp->next;
+            temp->next=value;
+        }
+        else
+        {
+            cout << "Position is out of bounds. No insertion made." << endl;
+        }
+    }
+    
+     cout << "\nUpdated Linked List: ";
+
+    temp=head;
+    while(temp)
+    {
+        cout<<temp->data<<"  ";
         temp=temp->next;
     }
 
-    if(!ans) cout<<"The value is not present in the linked list !!"<<endl;
+    cout<<endl;
+
+
 
 }
