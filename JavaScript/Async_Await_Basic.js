@@ -23,6 +23,7 @@ function api(num){
     })
 }
 
+
 async function getweather(){
     await api(10001);
     await api(20003);
