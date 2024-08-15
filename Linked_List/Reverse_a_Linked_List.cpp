@@ -51,7 +51,9 @@ int main()
 
 
 
-    // Now reversing the linked list
+ // Now reversing the linked list
+// Reversing by assigning all the values of the Existing linked list in front 
+    
     Node *head1,*temp1;
     head1=NULL;
     temp=head;
