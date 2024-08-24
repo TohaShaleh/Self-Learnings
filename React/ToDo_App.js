@@ -7,15 +7,20 @@ const page = () => {
   const [descrip, setdescrip] = useState("")
   const [store, setstore] = useState([]);
 
+  
+  //Taking Title input
   const take_title = (e) => {
     settitle(e.target.value);
 
   }
+
+  //Taking description input
   const take_descrip = (e) => {
     setdescrip(e.target.value);
 
   }
 
+  //Function to store title and description in Store array which is array of objects
   const add_title = (e) => {
     e.preventDefault();
     setstore([...store, { title, descrip }]);
@@ -23,7 +28,13 @@ const page = () => {
     settitle("")
   }
 
+  //Function to delete the title and description by passing the specific index
+const deletetask=(ind)=>{
+  const delstore=[...store];
+  delstore.splice(ind,1);
+  setstore(delstore);
 
+}
  
 
 
@@ -65,6 +76,12 @@ const page = () => {
                       
                       <h1 className='w-[300px] text-3xl'>{item.title}</h1>
                       <h1 className='w-[300px] text-2xl'>{item.descrip}</h1>
+
+                         
+                         // Added the Button for the delete task
+                         <button onClick={()=>{
+                        deletetask(ind)
+                      }} className='bg-red-600 rounded hover:bg-green-500 p-3 m-3'>Delete Task</button>
                       
                   </div>
                  
