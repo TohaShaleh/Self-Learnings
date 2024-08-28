@@ -1,0 +1,57 @@
+# Virtual inheritance is used to avoid the diamond problem (multiple instances of the same base class being created).
+
+
+
+
+#Explanation :
+
+Virtual Inheritance: This ensures that there is only one base class a in the derived class d, even though d inherits from both b and c.
+
+# Virtual Methods: The aa() method is virtual, meaning it can be overridden in derived classes if needed.
+
+
+
+
+
+
+## The Diamond Problem ::
+Let's break down the scenario to understand how virtual inheritance works here:
+
+Base Class (a):
+class a is the base class with a method aa().
+
+Intermediate Classes (b and c):
+class b and class c inherit from a. Since both inherit from the same base class a, without virtual inheritance, there would be two separate instances of a in any class that inherits from both b and c.
+
+Derived Class (d):
+class d inherits from both b and c. If b and c were to inherit from a normally (i.e., without virtual inheritance), d would have two instances of a: one from b and one from c. This creates ambiguity, as it's unclear which instance of a should be used when calling aa() from d.
+
+
+
+
+## How Virtual Inheritance Solves the Problem ?
+With virtual inheritance, the C++ compiler ensures that only one instance of the base class a is shared among all classes derived from it, no matter how complex the inheritance hierarchy is.
+
+
+
+
+
+## Why we have used Virtual keyword infront of the method ?
+
+The virtual keyword in C++ is used to indicate that a function is a virtual function. Virtual functions are primarily used when you want to allow a function to be overridden in a derived class and ensure that the correct function is called based on the actual type of the object, even when using a base class pointer or reference. This is a key feature for achieving runtime polymorphism.
+
+
+
+
+
+
+## What is Instance of a class ? 
+
+i) An instance of a class is a specific object created from the class definition.
+
+ii) Each instance has its own separate memory space for storing data members and can use the methods defined by the class.
+
+iii) While the class defines the structure and behavior, an instance is the actual "thing" in memory that you interact with in your program.
+
+
+
