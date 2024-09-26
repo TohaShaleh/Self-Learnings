@@ -1,2 +1,4 @@
 # Self-Learnings
-I usually save all the topics I’ve learned so far, so when I need to revise any topic, I can easily come back here and review my practices.
+
+This repository serves as a collection of some of the topics and concepts I have practiced over time. It acts as a personal knowledge base that I can easily reference whenever I need to review or revisit any particular subject. By maintaining this repository, I ensure that all my practices, notes, and examples are readily available for quick revision and improvement.
+
