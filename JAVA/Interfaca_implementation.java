@@ -36,3 +36,40 @@ public class Main {
         myDog.makeSound();
     }
 }
+
+
+
+
+
+
+
+// Solution of Multiple inheritace in JaVa !!
+
+interface toha {
+    
+    void send();  
+    
+}
+
+interface anik{
+    void send();
+}
+
+class mobile implements toha,anik{
+
+    @Override
+    public void send()
+    {
+        System.out.println("\nI can send wheanever i just want !! \n");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+       
+       mobile obj=new mobile();
+       obj.send();
+    }
+}
+
+
