@@ -1,4 +1,12 @@
 
+//  The super keyword in Java is used to refer to the immediate parent class object. It is primarily used for:
+
+// 	1.	Accessing parent class constructors.
+// 	2.	Accessing parent class methods.
+// 	3.	Accessing parent class instance variables.
+
+
+
 class Animal {
     String name = "Animal";
 
